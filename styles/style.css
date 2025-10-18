@@ -5,7 +5,6 @@ h1 {
 .content-section {
   box-sizing: border-box;
   width: 1100px;
-  min-height: 100px;
   margin: auto;
 }
 /**HEADER**/
@@ -22,13 +21,17 @@ h1 {
 .header-nav ul {
   display: flex;
   flex-direction: row;
-  gap: 26px;
+  gap: 33px;
   list-style: circle;
+}
+
+.header-nav ul li:first-child {
+  list-style: none;
 }
 
 .header-logo {
   display: block;
-  width: 148px;
+  width: 135px;
   height: 105px;
 }
 
@@ -100,7 +103,7 @@ h1 {
   text-align: center;
   line-height: 1.15;
   margin-top: 20px;
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
 .aligned-text-right {
@@ -161,11 +164,13 @@ h1 {
 .lots__card-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 30px;
 }
 
 .lots__card-list-item {
+  list-style: none;
   all: inherit;
   width: 334px;
   min-height: 596px;
@@ -208,37 +213,29 @@ h1 {
   font-style: normal;
 }
 
-.card_type_film {
+.card_type {
   background-size: cover;
   background-position: center;
   position: relative;
-  background-image: url(../images/card-lot-01.jpg);
   background-repeat: no-repeat;
   z-index: 0;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-  background-size: cover;
-  background-position: center;
-  position: relative;
   background-image: url(../images/card-lot-02.jpg);
-  background-repeat: no-repeat;
-  z-index: 0;
 }
 
 .card_type_picture {
-  background-size: cover;
-  background-position: center;
-  position: relative;
   background-image: url(../images/card-lot-03.jpg);
-  background-repeat: no-repeat;
-  z-index: 0;
 }
 
 .lots__look-more-link {
   display: block;
   width: 192px;
-  height: 23px;
   padding: 0px 820px 2px 40px;
   font-size: 20px;
   color: black;
@@ -259,7 +256,7 @@ h1 {
 .about-column {
   display: grid;
   grid-template-columns: 334px 1fr;
-  padding-left: 47px;
+  padding-left: 27px;
 }
 
 .about-column__left {
@@ -310,7 +307,7 @@ h1 {
 
 /**FOOTER**/
 .footer {
-  padding-top: 180px;
+  padding-top: 170px;
 }
 
 .footer-container {
@@ -319,11 +316,15 @@ h1 {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 50px;
-  height: 180px;
 }
 
 .address-footer {
+  padding-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 82px;
   font-style: normal;
+  font-size: 18px;
+  line-height: 1.35;
 }
 
 .footer__menu {
@@ -331,6 +332,8 @@ h1 {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   color: #000;
+  font-size: 18px;
+  padding-top: 15px;
 }
 
 .footer__menu-list {
@@ -350,18 +353,15 @@ h1 {
   text-decoration: none;
 }
 
-.socials {
+
+.footer__social-list {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 240px;
-  height: 48px;
-}
-
-.footer__social-list {
-  display: flex;
   gap: 48px;
   list-style: none;
+  padding-top: 15px;
 }
 
 .footer__social-icon {
